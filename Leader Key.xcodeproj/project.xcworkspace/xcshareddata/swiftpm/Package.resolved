@@ -1,0 +1,51 @@
+{
+  "originHash" : "bea5d70eb21b633ef21744ff0eb74d724cb8f7da8069d463466b428d2ad3aba7",
+  "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "38925e3cfacf3fb89a81a35b1cd44fd5a5b7e0fa",
+        "version" : "8.2.0"
+      }
+    },
+    {
+      "identity" : "keyboardshortcuts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/KeyboardShortcuts",
+      "state" : {
+        "revision" : "09e4a10ed6b65b3a40fe07b6bf0c84809313efc4",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "launchatlogin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin",
+      "state" : {
+        "revision" : "22923d335429bfd38c52435505b06a10bcc520fd",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "preferences",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Preferences",
+      "state" : {
+        "revision" : "2f4f65eed252198be383aa0d9058bbaf8f740aa5",
+        "version" : "3.1.0"
+      }
+    },
+    {
+      "identity" : "swiftformat",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/SwiftFormat",
+      "state" : {
+        "revision" : "825b4cdadbcabb91661243a09aeb44c3d4ef459d",
+        "version" : "0.53.7"
+      }
+    }
+  ],
+  "version" : 3
+}
