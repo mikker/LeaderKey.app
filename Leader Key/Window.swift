@@ -36,7 +36,7 @@ class Window: NSPanel, NSWindowDelegate {
 
         backgroundColor = .clear
         isOpaque = false
-        
+
         delegate = self
     }
 

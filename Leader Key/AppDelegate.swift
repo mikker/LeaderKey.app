@@ -56,6 +56,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.handleReloadConfig = {
             self.config.reloadConfig()
         }
+        statusItem.handleRevealConfig = {
+            NSWorkspace.shared.activateFileViewerSelecting([self.config.fileURL()])
+        }
         statusItem.enable()
 
         KeyboardShortcuts.onKeyUp(for: .activate) {
@@ -70,11 +73,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction
     func settingsMenuItemActionHandler(_: NSMenuItem) {
         settingsWindowController.show()
-    }
-
-    @IBAction
-    func revealConfigFile(_: NSMenuItem) {
-        NSWorkspace.shared.activateFileViewerSelecting([config.fileURL()])
     }
 
     func show() {

@@ -32,13 +32,13 @@ class Controller {
         self.userState = userState
         self.userConfig = userConfig
     }
-    
+
     func show() {
         window.show()
     }
-    
+
     func hide() {
-        window.hide() {
+        window.hide {
             self.clear()
         }
     }
@@ -80,19 +80,27 @@ class Controller {
     }
 
     private func runAction(_ action: Action) {
-        delay(250) {
-            switch action.type {
-            case .application:
-                NSWorkspace.shared.openApplication(at: URL(fileURLWithPath: action.value), configuration: NSWorkspace.OpenConfiguration())
-            case .url:
-                NSWorkspace.shared.open(URL(string: action.value)!)
-            default:
-                print("\(action.type) unknown")
-            }
+        switch action.type {
+        case .application:
+            NSWorkspace.shared.openApplication(at: URL(fileURLWithPath: action.value), configuration: NSWorkspace.OpenConfiguration())
+        case .url:
+            NSWorkspace.shared.open(URL(string: action.value)!, configuration: DontActivateConfiguration.shared.configuration)
+        default:
+            print("\(action.type) unknown")
         }
     }
 
     private func clear() {
         userState.clear()
+    }
+}
+
+class DontActivateConfiguration {
+    let configuration = NSWorkspace.OpenConfiguration()
+
+    static var shared = DontActivateConfiguration()
+
+    init() {
+        configuration.activates = false
     }
 }

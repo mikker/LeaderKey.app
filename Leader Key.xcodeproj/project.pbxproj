@@ -517,7 +517,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Leader Key/Support/Preview Content\"";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -551,7 +551,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Leader Key/Support/Preview Content\"";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;

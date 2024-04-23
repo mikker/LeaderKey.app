@@ -13,6 +13,7 @@ class StatusItem {
 
     var handlePreferences: (() -> Void)?
     var handleReloadConfig: (() -> Void)?
+    var handleRevealConfig: (() -> Void)?
 
     func enable() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
@@ -34,13 +35,20 @@ class StatusItem {
         preferencesItem.target = self
         menu.addItem(preferencesItem)
 
+        menu.addItem(NSMenuItem.separator())
+
+        let revealConfigItem = NSMenuItem(title: "Show config in Finder", action: #selector(revealConfigFile), keyEquivalent: "")
+        revealConfigItem.target = self
+        menu.addItem(revealConfigItem)
+
         let reloadConfigItem = NSMenuItem(
-            title: "Reload config", action: #selector(reloadConfig), keyEquivalent: "r"
+            title: "Reload config", action: #selector(reloadConfig), keyEquivalent: ""
         )
         reloadConfigItem.target = self
         menu.addItem(reloadConfigItem)
 
         menu.addItem(NSMenuItem.separator())
+
         menu.addItem(
             NSMenuItem(
                 title: "Quit Leader Key", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"
@@ -55,5 +63,9 @@ class StatusItem {
 
     @objc func reloadConfig() {
         handleReloadConfig?()
+    }
+
+    @objc func revealConfigFile() {
+        handleRevealConfig?()
     }
 }
