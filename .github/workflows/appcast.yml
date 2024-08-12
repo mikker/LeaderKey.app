@@ -11,8 +11,6 @@ jobs:
   call-workflow:
     uses: sindresorhus/appcast-workflow/.github/workflows/appcast.yml@main
     secrets: inherit
-    with:
-      environment: "github-pages"
     permissions:
       pages: write
       id-token: write
