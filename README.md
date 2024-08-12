@@ -4,7 +4,7 @@
 
 **Leader Key is a riff on @raycastapp, @mxstbr's multi-key Karabiner setup, and Vim's `<leader>` key.**
 
-<video src="https://s3.brnbw.com/esavJinFLbAyivBA-ARptueHMEB1zizywvQHqcAoC8SeblkqOwVyWO2oZda9uoAKdzXKCXV71PxqC9ZI6Eg8wQLzTjjhmytzfGi1sy8wts2lMe2bgs5ZP.mp4">
+https://github.com/user-attachments/assets/b62f1fee-ebaf-45d5-a7e5-abd7bb4a17bd
 
 ## Why Leader Key?
 
