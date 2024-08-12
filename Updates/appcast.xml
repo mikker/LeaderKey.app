@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Leader Key</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Mon, 12 Aug 2024 12:28:04 +0200</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="Leader%20Key.b21.zip" length="854778" type="application/octet-stream" sparkle:edSignature="0sHSWYfZBSlEi1DMDFV+wbKlwbQFvOyiLgTQJJPauBW0zbWmprGxCtuAP6TQXGRpxTkXZZZ5Gq0enE8+3B6tCA=="/>
+        </item>
+    </channel>
+</rss>
