@@ -2,6 +2,7 @@
 set -e
 
 APP_NAME="Leader Key"
+BUCKET=leader-key-updates
 
 if [[ ! -d Updates/Leader\ Key.app ]]; then
   echo "Archive and export bundle to Updates/$APP_NAME.app first"
@@ -30,7 +31,7 @@ vim Updates/appcast.xml
 
 cp -f "$FILENAME" "Updates/$APP_NAME-latest.zip"
 
-# s3cmd sync -F -P Updates/*.{xml,zip} s3://moves-updates
+s3cmd sync -F -P Updates/*.{xml,zip} s3://$BUCKET
 
 rm -rf "Updates/$APP_NAME.app"
 
