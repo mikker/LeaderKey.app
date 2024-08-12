@@ -9,7 +9,7 @@ if [[ ! -d Updates/Leader\ Key.app ]]; then
 fi
 
 BUILD=$(git rev-list "$(git rev-parse --abbrev-ref HEAD)" | wc -l | awk '{ print $1 }')
-BUILD="$((BUILD + 10))" # add 9 because reasons
+BUILD="$((BUILD + 0))"
 FILENAME="Updates/$APP_NAME.b$BUILD.zip"
 
 ditto -c -k --sequesterRsrc --keepParent "Updates/$APP_NAME.app" "$FILENAME"
