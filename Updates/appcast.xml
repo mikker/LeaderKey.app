@@ -8,7 +8,7 @@
             <sparkle:version>5</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="Leader%20Key.b21.zip" length="854778" type="application/octet-stream" sparkle:edSignature="0sHSWYfZBSlEi1DMDFV+wbKlwbQFvOyiLgTQJJPauBW0zbWmprGxCtuAP6TQXGRpxTkXZZZ5Gq0enE8+3B6tCA=="/>
+            <enclosure url="Leader%20Key.b12.zip" length="854778" type="application/octet-stream" sparkle:edSignature="+TXC+Ep+55wfs/cec/k4NctM23vI5m2fAFge3ZfJcHAuEOp5vylWuWmX4cvkkFZej4l+n5FRAPmPFi5Al1g7BA=="/>
         </item>
     </channel>
 </rss>

@@ -1,0 +1,38 @@
+#!/bin/bash
+set -e
+
+APP_NAME="Leader Key"
+
+if [[ ! -d Updates/Leader\ Key.app ]]; then
+  echo "Archive and export bundle to Updates/$APP_NAME.app first"
+  exit 1
+fi
+
+BUILD=$(git rev-list "$(git rev-parse --abbrev-ref HEAD)" | wc -l | awk '{ print $1 }')
+BUILD="$((BUILD + 10))" # add 9 because reasons
+FILENAME="Updates/$APP_NAME.b$BUILD.zip"
+
+ditto -c -k --sequesterRsrc --keepParent "Updates/$APP_NAME.app" "$FILENAME"
+bin/generate_appcast Updates
+
+echo "
+<description><![CDATA[
+  <h2>Release notes</h2>
+  <ul>
+    <li><strong>Added:</strong> Thing</li>
+    <li><strong>Fixed:</strong> Thing</li>
+  </ul>
+]]></description>
+" | pbcopy
+echo "Added release notes <dscription> to clipboard"
+read -r -p "Press enter to continue"
+vim Updates/appcast.xml
+
+cp -f "$FILENAME" "Updates/$APP_NAME-latest.zip"
+
+# s3cmd sync -F -P Updates/*.{xml,zip} s3://moves-updates
+
+rm -rf "Updates/$APP_NAME.app"
+
+git add Updates/ ./**/Info.plist
+git commit -m "Release build $BUILD"

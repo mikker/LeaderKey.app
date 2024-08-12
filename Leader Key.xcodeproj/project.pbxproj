@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4279AFED2C6A175500952A83 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 4279AFEC2C6A175500952A83 /* LaunchAtLogin */; };
 		427C17EF2BD311B500955B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427C17EE2BD311B500955B98 /* Assets.xcassets */; };
 		427C17F22BD311B500955B98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427C17F12BD311B500955B98 /* Preview Assets.xcassets */; };
 		427C17FD2BD311B500955B98 /* Leader_KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C17FC2BD311B500955B98 /* Leader_KeyTests.swift */; };
@@ -28,7 +29,6 @@
 		427C18382BD3262100955B98 /* VisualEffectBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C18372BD3262100955B98 /* VisualEffectBackground.swift */; };
 		427C183B2BD329F900955B98 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C183A2BD329F900955B98 /* UserConfig.swift */; };
 		427C18482BD5B3FD00955B98 /* FileMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C18472BD5B3FD00955B98 /* FileMonitor.swift */; };
-		427C184B2BD5C22400955B98 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 427C184A2BD5C22400955B98 /* LaunchAtLogin */; };
 		427C184D2BD65C5C00955B98 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C184C2BD65C5C00955B98 /* Defaults.swift */; };
 		427C18502BD6652500955B98 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C184F2BD6652500955B98 /* Util.swift */; };
 		427C18542BD6E59300955B98 /* NSWindow+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C18532BD6E59300955B98 /* NSWindow+Animations.swift */; };
@@ -87,7 +87,7 @@
 			files = (
 				427C18232BD31DF100955B98 /* Settings in Frameworks */,
 				427C181A2BD3123C00955B98 /* Defaults in Frameworks */,
-				427C184B2BD5C22400955B98 /* LaunchAtLogin in Frameworks */,
+				4279AFED2C6A175500952A83 /* LaunchAtLogin in Frameworks */,
 				427C18172BD311ED00955B98 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +217,7 @@
 				427C18162BD311ED00955B98 /* KeyboardShortcuts */,
 				427C18192BD3123C00955B98 /* Defaults */,
 				427C18222BD31DF100955B98 /* Settings */,
-				427C184A2BD5C22400955B98 /* LaunchAtLogin */,
+				4279AFEC2C6A175500952A83 /* LaunchAtLogin */,
 			);
 			productName = "Leader Key";
 			productReference = 427C17E72BD311B400955B98 /* Leader Key.app */;
@@ -295,8 +295,8 @@
 				427C18152BD311EC00955B98 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				427C18182BD3123C00955B98 /* XCRemoteSwiftPackageReference "Defaults" */,
 				427C18212BD31DF100955B98 /* XCRemoteSwiftPackageReference "Preferences" */,
-				427C18492BD5C22400955B98 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				4279AFE92C6A070300952A83 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				4279AFEB2C6A175500952A83 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			productRefGroup = 427C17E82BD311B400955B98 /* Products */;
 			projectDirPath = "";
@@ -522,7 +522,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Leader Key/Support/Preview Content\"";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
@@ -559,7 +559,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Leader Key/Support/Preview Content\"";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
@@ -592,7 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -612,7 +612,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -631,7 +631,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -649,7 +649,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -712,6 +712,14 @@
 				minimumVersion = 2.6.4;
 			};
 		};
+		4279AFEB2C6A175500952A83 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		427C18152BD311EC00955B98 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
@@ -736,17 +744,14 @@
 				minimumVersion = 3.1.0;
 			};
 		};
-		427C18492BD5C22400955B98 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4279AFEC2C6A175500952A83 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4279AFEB2C6A175500952A83 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
 		427C18162BD311ED00955B98 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 427C18152BD311EC00955B98 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
@@ -761,11 +766,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 427C18212BD31DF100955B98 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Settings;
-		};
-		427C184A2BD5C22400955B98 /* LaunchAtLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 427C18492BD5C22400955B98 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
-			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
