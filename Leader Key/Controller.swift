@@ -1,10 +1,3 @@
-//
-//  Controller.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 22/10/2020.
-//
-
 import Cocoa
 import Combine
 

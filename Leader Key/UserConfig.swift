@@ -1,10 +1,3 @@
-//
-//  UserConfig.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 20/04/2024.
-//
-
 import Cocoa
 import Defaults
 
@@ -105,16 +98,13 @@ let defaultConfig = """
 {
     "type": "group",
     "actions": [
-        { "key": "t", "type": "application", "value": "/Applications/WezTerm.app" },
+        { "key": "t", "type": "application", "value": "/Applications/Utilities/Terminal.app" },
         {
             "key": "o",
             "type": "group",
             "actions": [
-                { "key": "a", "type": "application", "value": "/Applications/Arc.app" },
-                { "key": "c", "type": "application", "value": "/Applications/Google Chrome.app" },
                 { "key": "s", "type": "application", "value": "/Applications/Safari.app" },
                 { "key": "e", "type": "application", "value": "/Applications/Mail.app" },
-                { "key": "z", "type": "application", "value": "/Applications/Slack.app" },
                 { "key": "i", "type": "application", "value": "/System/Applications/Music.app" },
                 { "key": "m", "type": "application", "value": "/Applications/Messages.app" }
             ]

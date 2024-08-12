@@ -1,10 +1,3 @@
-//
-//  Window.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 08/10/2020.
-//
-
 import Cocoa
 import QuartzCore
 import SwiftUI
@@ -44,10 +37,7 @@ class Window: NSPanel, NSWindowDelegate {
 
     override func makeKeyAndOrderFront(_ sender: Any?) {
         super.makeKeyAndOrderFront(sender)
-//        makeFirstResponder(nil)
     }
-
-//    func windowDidBecomeKey(_: Notification) {}
 
     override func performKeyEquivalent(with _: NSEvent) -> Bool {
         return true

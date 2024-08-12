@@ -1,10 +1,3 @@
-//
-//  FileMonitor.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 21/04/2024.
-//
-
 import Foundation
 
 class FileMonitor {

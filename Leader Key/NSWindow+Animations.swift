@@ -1,10 +1,3 @@
-//
-//  NSWindow+Animations.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 22/04/2024.
-//
-
 import Cocoa
 
 extension NSWindow {

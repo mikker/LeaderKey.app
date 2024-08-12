@@ -1,11 +1,3 @@
-//
-//  StatusItem.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 23/02/2020.
-//  Copyright © 2020 Brainbow. All rights reserved.
-//
-
 import Cocoa
 
 class StatusItem {

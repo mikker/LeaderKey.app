@@ -1,10 +1,3 @@
-//
-//  GeneralPane.swift
-//  Leader Key
-//
-//  Created by Mikkel Malmberg on 23/09/2020.
-//
-
 import Defaults
 import KeyboardShortcuts
 import LaunchAtLogin
