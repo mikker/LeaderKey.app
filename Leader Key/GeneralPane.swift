@@ -1,4 +1,3 @@
-import Defaults
 import KeyboardShortcuts
 import LaunchAtLogin
 import Settings
@@ -11,10 +10,6 @@ struct GeneralPane: View {
         Settings.Container(contentWidth: contentWidth) {
             Settings.Section(title: "Shortcut") {
                 KeyboardShortcuts.Recorder(for: .activate)
-            }
-
-            Settings.Section(title: "Config file") {
-                Defaults.Toggle("Watch for changes", key: .watchConfigFile)
             }
 
             Settings.Section(title: "App") {

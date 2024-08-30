@@ -43,49 +43,53 @@ class UserConfig {
             do {
                 try bootstrapConfig()
             } catch {
-                print("Failed writing deafult config: \(error)")
+                print("Failed writing default config: \(error)")
                 let alert = NSAlert()
                 alert.alertStyle = .critical
                 alert.messageText = "\(error)"
                 alert.runModal()
                 root = Group(actions: [])
-            }
-        }
-
-        Task {
-            for await on in Defaults.updates(.watchConfigFile) {
-                if on {
-                    self.fileMonitor.startMonitoring(fileURL: fileURL()) {
-                        print("File has been modified.")
-                        self.reloadConfig()
-                    }
-
-                } else {
-                    self.fileMonitor.stopMonitoring()
-                }
             }
         }
 
         loadConfig()
+        startWatching()
+    }
+
+    private func startWatching() {
+        self.fileMonitor.startMonitoring(fileURL: fileURL()) {
+            print("File has been modified.")
+            self.reloadConfig()
+        }
     }
 
     func loadConfig() {
-        if let jsonData = readConfigFile().data(using: .utf8) {
-            let decoder = JSONDecoder()
-            do {
-                let root_ = try decoder.decode(Group.self, from: jsonData)
-                root = root_
-            } catch {
-                print("Error decoding JSON: \(error)")
-                let alert = NSAlert()
-                alert.alertStyle = .critical
-                alert.messageText = "\(error)"
-                alert.runModal()
+        if FileManager.default.fileExists(atPath: fileURL().path) {
+            if let jsonData = readConfigFile().data(using: .utf8) {
+                let decoder = JSONDecoder()
+                do {
+                    let root_ = try decoder.decode(Group.self, from: jsonData)
+                    root = root_
+                } catch {
+                    print("Error decoding JSON: \(error)")
+                    handleConfigError(error)
+                }
+            } else {
+                print("Failed to read config file")
                 root = Group(actions: [])
             }
         } else {
+            print("Config file does not exist, using empty configuration")
             root = Group(actions: [])
         }
+    }
+
+    private func handleConfigError(_ error: Error) {
+        let alert = NSAlert()
+        alert.alertStyle = .critical
+        alert.messageText = "\(error)"
+        alert.runModal()
+        root = Group(actions: [])
     }
 
     func reloadConfig() {
