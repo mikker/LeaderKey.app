@@ -133,15 +133,15 @@
 			isa = PBXGroup;
 			children = (
 				427C181F2BD31C3D00955B98 /* AppDelegate.swift */,
+				427C18262BD31E2E00955B98 /* StatusItem.swift */,
+				427C183A2BD329F900955B98 /* UserConfig.swift */,
+				427C182E2BD3206200955B98 /* UserState.swift */,
 				427C181B2BD314B500955B98 /* Constants.swift */,
 				427C18272BD31E2E00955B98 /* Controller.swift */,
 				427C184C2BD65C5C00955B98 /* Defaults.swift */,
 				427C18472BD5B3FD00955B98 /* FileMonitor.swift */,
 				427C18242BD31E2E00955B98 /* GeneralPane.swift */,
 				427C18532BD6E59300955B98 /* NSWindow+Animations.swift */,
-				427C18262BD31E2E00955B98 /* StatusItem.swift */,
-				427C183A2BD329F900955B98 /* UserConfig.swift */,
-				427C182E2BD3206200955B98 /* UserState.swift */,
 				427C184F2BD6652500955B98 /* Util.swift */,
 				427C18252BD31E2E00955B98 /* Window.swift */,
 				427C17EE2BD311B500955B98 /* Assets.xcassets */,
@@ -540,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Leader-Key";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Leader-Key";
 				PRODUCT_NAME = "$(TARGET_NAME)";

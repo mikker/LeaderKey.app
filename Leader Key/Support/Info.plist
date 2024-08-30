@@ -5,6 +5,6 @@
 	<key>SUPublicEDKey</key>
 	<string>4ZfPYKvzE7b/uYW4B8f2v++7Bry/OmvYHCzl3g936KE=</string>
 	<key>SUFeedURL</key>
-	<string></string>
+	<string>https://leader-key-updates.s3.amazonaws.com/appcast.xml</string>
 </dict>
 </plist>
