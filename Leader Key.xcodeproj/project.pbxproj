@@ -32,6 +32,7 @@
 		427C184D2BD65C5C00955B98 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C184C2BD65C5C00955B98 /* Defaults.swift */; };
 		427C18502BD6652500955B98 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C184F2BD6652500955B98 /* Util.swift */; };
 		427C18542BD6E59300955B98 /* NSWindow+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C18532BD6E59300955B98 /* NSWindow+Animations.swift */; };
+		42E70A572C823FF200FCF902 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 42E70A562C823FF200FCF902 /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E70A572C823FF200FCF902 /* Sparkle in Frameworks */,
 				427C18232BD31DF100955B98 /* Settings in Frameworks */,
 				427C181A2BD3123C00955B98 /* Defaults in Frameworks */,
 				4279AFED2C6A175500952A83 /* LaunchAtLogin in Frameworks */,
@@ -116,6 +118,7 @@
 				427C17FB2BD311B500955B98 /* Leader KeyTests */,
 				427C18052BD311B500955B98 /* Leader KeyUITests */,
 				427C17E82BD311B400955B98 /* Products */,
+				42E70A552C823FF200FCF902 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +200,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		42E70A552C823FF200FCF902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +228,7 @@
 				427C18192BD3123C00955B98 /* Defaults */,
 				427C18222BD31DF100955B98 /* Settings */,
 				4279AFEC2C6A175500952A83 /* LaunchAtLogin */,
+				42E70A562C823FF200FCF902 /* Sparkle */,
 			);
 			productName = "Leader Key";
 			productReference = 427C17E72BD311B400955B98 /* Leader Key.app */;
@@ -766,6 +777,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 427C18212BD31DF100955B98 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Settings;
+		};
+		42E70A562C823FF200FCF902 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4279AFE92C6A070300952A83 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
