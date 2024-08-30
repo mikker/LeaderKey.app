@@ -20,6 +20,19 @@ https://github.com/user-attachments/assets/b62f1fee-ebaf-45d5-a7e5-abd7bb4a17bd
 - `[leader][m][m]` → Mute audio (`media mute`)
 - `[leader][w][m]` → Maximize current window (`window maximize`)
 
+## Configuration Options
+
+Leader Key uses a JSON configuration file to define your shortcuts. Here's a table describing the available options:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `type` | String | The type of action. Can be `"group"`, `"application"`, or `"url"`. |
+| `key` | String | The key to trigger this action or group. |
+| `value` | String | For `"application"` type, the path to the application. For `"url"` type, the URL to open. |
+| `actions` | Array | For `"group"` type, an array of nested actions or groups. |
+
+### Example Configuration Structure
+
 ## Example Configuration
 
 FWIW, here's a recent version of my own config:
