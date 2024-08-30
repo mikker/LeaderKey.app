@@ -6,6 +6,8 @@
 
 https://github.com/user-attachments/assets/b62f1fee-ebaf-45d5-a7e5-abd7bb4a17bd
 
+[Download latest version](https://leader-key-updates.s3.amazonaws.com/Leader%20Key-latest.zip)
+
 ## Why Leader Key?
 
 ### Problems with traditional launchers:
@@ -24,12 +26,12 @@ https://github.com/user-attachments/assets/b62f1fee-ebaf-45d5-a7e5-abd7bb4a17bd
 
 Leader Key uses a JSON configuration file to define your shortcuts. Here's a table describing the available options:
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `type` | String | The type of action. Can be `"group"`, `"application"`, or `"url"`. |
-| `key` | String | The key to trigger this action or group. |
-| `value` | String | For `"application"` type, the path to the application. For `"url"` type, the URL to open. |
-| `actions` | Array | For `"group"` type, an array of nested actions or groups. |
+| Field     | Type   | Description                                                                               |
+| --------- | ------ | ----------------------------------------------------------------------------------------- |
+| `type`    | String | The type of action. Can be `"group"`, `"application"`, or `"url"`.                        |
+| `key`     | String | The key to trigger this action or group.                                                  |
+| `value`   | String | For `"application"` type, the path to the application. For `"url"` type, the URL to open. |
+| `actions` | Array  | For `"group"` type, an array of nested actions or groups.                                 |
 
 ### Example Configuration Structure
 
