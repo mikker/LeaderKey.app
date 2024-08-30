@@ -13,3 +13,6 @@ echo "${VERSION} (${BUILD})"
 
 agvtool new-marketing-version "${VERSION}"
 agvtool new-version -all ${BUILD}
+
+echo "Resolving package dependencies"
+xcodebuild -resolvePackageDependencies
