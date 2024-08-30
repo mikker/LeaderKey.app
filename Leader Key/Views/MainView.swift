@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var userState: UserState
+  @EnvironmentObject var userState: UserState
 
-    var body: some View {
-        VStack(spacing: 8) {
-            Text(userState.currentGroup?.key ?? userState.display ?? "●").fontDesign(.rounded).fontWeight(.semibold).font(.system(size: 28, weight: .semibold, design: .rounded))
-        }.frame(width: 200, height: 200, alignment: .center)
-            .background(
-                VisualEffectView(material: .hudWindow, blendingMode: .behindWindow))
-            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-    }
+  var body: some View {
+    VStack(spacing: 8) {
+      Text(userState.currentGroup?.key ?? userState.display ?? "●").fontDesign(.rounded).fontWeight(
+        .semibold
+      ).font(.system(size: 28, weight: .semibold, design: .rounded))
+    }.frame(width: 200, height: 200, alignment: .center)
+      .background(
+        VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+      )
+      .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+  }
 }
 
 struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView().environmentObject(UserState(userConfig: UserConfig()))
-    }
+  static var previews: some View {
+    MainView().environmentObject(UserState(userConfig: UserConfig()))
+  }
 }

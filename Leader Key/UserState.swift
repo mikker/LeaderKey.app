@@ -1,19 +1,19 @@
 import SwiftUI
 
 final class UserState: ObservableObject {
-    var userConfig: UserConfig!
+  var userConfig: UserConfig!
 
-    @Published var display: String?
-    @Published var currentGroup: Group?
+  @Published var display: String?
+  @Published var currentGroup: Group?
 
-    init(userConfig: UserConfig!, lastChar: String? = nil, currentGroup: Group? = nil) {
-        self.userConfig = userConfig
-        display = lastChar
-        self.currentGroup = currentGroup
-    }
+  init(userConfig: UserConfig!, lastChar: String? = nil, currentGroup: Group? = nil) {
+    self.userConfig = userConfig
+    display = lastChar
+    self.currentGroup = currentGroup
+  }
 
-    func clear() {
-        display = nil
-        currentGroup = userConfig.root
-    }
+  func clear() {
+    display = nil
+    currentGroup = userConfig.root
+  }
 }
