@@ -56,14 +56,16 @@ class StatusItem {
 
     menu.addItem(NSMenuItem.separator())
 
-    let checkForUpdatesItem = NSMenuItem(
-      title: "Check for Updates...", action: #selector(checkForUpdates),
-      keyEquivalent: ""
-    )
-    checkForUpdatesItem.target = self
-    menu.addItem(checkForUpdatesItem)
+    #if !BETA
+      let checkForUpdatesItem = NSMenuItem(
+        title: "Check for Updates...", action: #selector(checkForUpdates),
+        keyEquivalent: ""
+      )
+      checkForUpdatesItem.target = self
+      menu.addItem(checkForUpdatesItem)
 
-    menu.addItem(NSMenuItem.separator())
+      menu.addItem(NSMenuItem.separator())
+    #endif
 
     let revealConfigItem = NSMenuItem(
       title: "Show config in Finder", action: #selector(revealConfigFile),

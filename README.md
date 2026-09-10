@@ -36,6 +36,13 @@ or
 $ brew install leader-key
 ```
 
+### Beta build
+
+The Xcode scheme **Leader Key Beta** builds a separately installable beta app. It
+uses the `Leader Key Beta.app` name, a distinct bundle identifier, independent
+preferences, and `~/Library/Application Support/Leader Key Beta` for its config.
+It does not use the release update feed.
+
 ### Post-Install setup
 - Open the settings menu with the menu bar icon <img width="17" alt="Screenshot 2025-05-21 at 1 58 46 PM" src="https://github.com/user-attachments/assets/7ba2cd99-dbd1-4b23-a35b-c5579e797321" />
 - Choose your [`leader`](#what-do-i-set-as-my-leader-key) (`Shortcut` that will open the app) 
@@ -113,7 +120,8 @@ open "leaderkey://navigate?keys=a,b,c&execute=false"
 
 #### What do I set as my Leader Key?
 
-Any key can be your leader key, but **only modifiers will not work**.
+Any non-modifier key can be your leader key. You can also enable **right ⌘** in Settings;
+it opens Leader Key when tapped and released, and requires macOS Input Monitoring permission.
 
 **Examples:**
 

@@ -1,3 +1,4 @@
+import AppKit
 import Defaults
 import KeyboardShortcuts
 import LaunchAtLogin
@@ -9,6 +10,8 @@ struct GeneralPane: View {
   @EnvironmentObject private var config: UserConfig
   @Default(.configDir) var configDir
   @Default(.theme) var theme
+  @Default(.useRightCommandAsLeader) var useRightCommandAsLeader
+  @State private var hasInputMonitoringPermission = CGPreflightListenEventAccess()
 
   var body: some View {
     Settings.Container(contentWidth: contentWidth) {
@@ -86,7 +89,35 @@ struct GeneralPane: View {
       }
 
       Settings.Section(title: "Shortcut") {
-        KeyboardShortcuts.Recorder(for: .activate)
+        VStack(alignment: .leading, spacing: 8) {
+          KeyboardShortcuts.Recorder(for: .activate)
+
+          Toggle("Use right ⌘ as Leader Key", isOn: $useRightCommandAsLeader)
+            .onChange(of: useRightCommandAsLeader) { enabled in
+              if enabled && !CGPreflightListenEventAccess() {
+                CGRequestListenEventAccess()
+              }
+
+              hasInputMonitoringPermission = CGPreflightListenEventAccess()
+              (NSApplication.shared.delegate as? AppDelegate)?.refreshRightCommandMonitor()
+            }
+
+          if useRightCommandAsLeader && !hasInputMonitoringPermission {
+            Text(
+              "Input Monitoring permission is required. Enable Leader Key in System Settings to use this shortcut."
+            )
+            .font(.caption)
+            .foregroundStyle(.secondary)
+          } else if useRightCommandAsLeader {
+            Text("Leader Key opens when you tap and release the right Command key.")
+              .font(.caption)
+              .foregroundStyle(.secondary)
+          }
+        }
+        .onAppear {
+          hasInputMonitoringPermission = CGPreflightListenEventAccess()
+          (NSApplication.shared.delegate as? AppDelegate)?.refreshRightCommandMonitor()
+        }
       }
 
       Settings.Section(title: "Theme") {

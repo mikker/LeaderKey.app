@@ -182,7 +182,7 @@ class UserConfig: ObservableObject {
     let appSupportDir = FileManager.default.urls(
       for: .applicationSupportDirectory, in: .userDomainMask)[0]
     let path = (appSupportDir.path as NSString).appendingPathComponent(
-      "Leader Key")
+      defaultDirectoryName)
     do {
       try FileManager.default.createDirectory(
         atPath: path, withIntermediateDirectories: true)
@@ -190,6 +190,14 @@ class UserConfig: ObservableObject {
       fatalError("Failed to create config directory")
     }
     return path
+  }
+
+  private static var defaultDirectoryName: String {
+    #if BETA
+      "Leader Key Beta"
+    #else
+      "Leader Key"
+    #endif
   }
 
   private func ensureValidConfigDirectory() {

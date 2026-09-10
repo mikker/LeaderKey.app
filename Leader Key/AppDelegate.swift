@@ -18,6 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,
 
   let statusItem = StatusItem()
   let config = UserConfig()
+  lazy var rightCommandMonitor = RightCommandMonitor { [weak self] in
+    self?.activate()
+  }
 
   var state: UserState!
   @IBOutlet var updaterController: SPUStandardUpdaterController!
@@ -66,9 +69,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     statusItem.handleRevealConfig = {
       NSWorkspace.shared.activateFileViewerSelecting([self.config.url])
     }
-    statusItem.handleCheckForUpdates = {
-      self.updaterController.checkForUpdates(nil)
-    }
+    #if !BETA
+      statusItem.handleCheckForUpdates = {
+        self.updaterController.checkForUpdates(nil)
+      }
+    #endif
 
     Task {
       for await value in Defaults.updates(.showMenuBarIcon) {
@@ -90,6 +95,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     // Activation policy is managed solely by the Settings window
 
     registerGlobalShortcuts()
+    updateRightCommandMonitor(enabled: Defaults[.useRightCommandAsLeader])
+
+    Task { @MainActor in
+      for await enabled in Defaults.updates(.useRightCommandAsLeader) {
+        self.updateRightCommandMonitor(enabled: enabled)
+      }
+    }
   }
 
   func activate() {
@@ -126,13 +138,29 @@ class AppDelegate: NSObject, NSApplicationDelegate,
         self.processKeys([groupKey])
       }
     }
-    if Defaults[.groupShortcuts].isEmpty && !KeyboardShortcuts.isEnabled(for: .activate) {
+    let hasRightCommandShortcut =
+      Defaults[.useRightCommandAsLeader] && rightCommandMonitor.hasInputMonitoringPermission
+    if Defaults[.groupShortcuts].isEmpty && !KeyboardShortcuts.isEnabled(for: .activate)
+      && !hasRightCommandShortcut
+    {
       showSettings()
     }
   }
 
+  private func updateRightCommandMonitor(enabled: Bool) {
+    if enabled && rightCommandMonitor.hasInputMonitoringPermission {
+      rightCommandMonitor.start()
+    } else {
+      rightCommandMonitor.stop()
+    }
+  }
+
+  func refreshRightCommandMonitor() {
+    updateRightCommandMonitor(enabled: Defaults[.useRightCommandAsLeader])
+  }
+
   func applicationWillTerminate(_ notification: Notification) {
-    // Config saves automatically on changes
+    rightCommandMonitor.stop()
   }
 
   @IBAction

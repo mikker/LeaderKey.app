@@ -39,6 +39,8 @@ extension Defaults.Keys {
   static let groupShortcuts = Key<Set<String>>(
     "groupShortcuts",
     default: Set(), suite: defaultsSuite)
+  static let useRightCommandAsLeader = Key<Bool>(
+    "useRightCommandAsLeader", default: false, suite: defaultsSuite)
 }
 
 enum AutoOpenCheatsheetSetting: String, Defaults.Serializable {

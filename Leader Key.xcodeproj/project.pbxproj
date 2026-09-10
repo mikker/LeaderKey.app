@@ -41,6 +41,8 @@
 		427C18502BD6652500955B98 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C184F2BD6652500955B98 /* Util.swift */; };
 		427C18542BD6E59300955B98 /* NSWindow+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C18532BD6E59300955B98 /* NSWindow+Animations.swift */; };
 		4284834C2E813212009D7EEF /* KeyboardLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284834B2E813212009D7EEF /* KeyboardLayoutTests.swift */; };
+		6A9D3E8101A24B6300D4C101 /* RightCommandMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D3E8001A24B6300D4C101 /* RightCommandMonitor.swift */; };
+		6A9D3E8301A24B6300D4C101 /* RightCommandMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D3E8201A24B6300D4C101 /* RightCommandMonitorTests.swift */; };
 		42B21FBC2D67566100F4A2C7 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21FBB2D67566100F4A2C7 /* Alerts.swift */; };
 		42CCB5A32DAD257700356FC0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBCA04D82D9F02F700271163 /* Kingfisher */; };
 		42DFCD722D5B7D48002EA111 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFCD712D5B7D46002EA111 /* Events.swift */; };
@@ -102,6 +104,8 @@
 		427C184F2BD6652500955B98 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		427C18532BD6E59300955B98 /* NSWindow+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindow+Animations.swift"; sourceTree = "<group>"; };
 		4284834B2E813212009D7EEF /* KeyboardLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutTests.swift; sourceTree = "<group>"; };
+		6A9D3E8001A24B6300D4C101 /* RightCommandMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightCommandMonitor.swift; sourceTree = "<group>"; };
+		6A9D3E8201A24B6300D4C101 /* RightCommandMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightCommandMonitorTests.swift; sourceTree = "<group>"; };
 		42B21FBB2D67566100F4A2C7 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		42DFCD712D5B7D46002EA111 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		42F4CDC82D458FF700D0DD76 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				427C181B2BD314B500955B98 /* Constants.swift */,
 				427C18272BD31E2E00955B98 /* Controller.swift */,
 				427C184C2BD65C5C00955B98 /* Defaults.swift */,
+				6A9D3E8001A24B6300D4C101 /* RightCommandMonitor.swift */,
 				42DFCD712D5B7D46002EA111 /* Events.swift */,
 				42F4CDD02D48C51F00D0DD76 /* Extensions.swift */,
 				42F4CDC82D458FF700D0DD76 /* MainMenu.swift */,
@@ -228,6 +233,7 @@
 				42454DDC2D71CBAB004E1374 /* ConfigValidatorTests.swift */,
 				EC5CEBC4C47B4C5DB2258814 /* URLSchemeTests.swift */,
 				427C17FC2BD311B500955B98 /* UserConfigTests.swift */,
+				6A9D3E8201A24B6300D4C101 /* RightCommandMonitorTests.swift */,
 			);
 			path = "Leader KeyTests";
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				42F4CDC92D458FF700D0DD76 /* MainMenu.swift in Sources */,
 				42454DDB2D71CB39004E1374 /* ConfigValidator.swift in Sources */,
 				427C184D2BD65C5C00955B98 /* Defaults.swift in Sources */,
+				6A9D3E8101A24B6300D4C101 /* RightCommandMonitor.swift in Sources */,
 				427C18292BD31E2E00955B98 /* MainWindow.swift in Sources */,
 				42FDC31A2D51687B004F5C5C /* AdvancedPane.swift in Sources */,
 				115AA5BF2DA521C600C17E18 /* ActionIcon.swift in Sources */,
@@ -454,6 +461,7 @@
 				EC5CEBC4C47B4C5DB2258813 /* URLSchemeTests.swift in Sources */,
 				427C17FD2BD311B500955B98 /* UserConfigTests.swift in Sources */,
 				4284834C2E813212009D7EEF /* KeyboardLayoutTests.swift in Sources */,
+				6A9D3E8301A24B6300D4C101 /* RightCommandMonitorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +604,15 @@
 			};
 			name = Release;
 		};
+		A1B2C3D42C3D4E5F00112233 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "BETA $(inherited)";
+			};
+			name = Beta;
+		};
 		427C180D2BD311B500955B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -668,6 +685,42 @@
 			};
 			name = Release;
 		};
+		A1B2C3D52C3D4E5F00112233 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Leader Key/Leader_Key.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 155;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Leader Key/Support/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Leader Key/Support/Beta-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Leader Key Beta";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.17.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Leader-Key.beta";
+				PRODUCT_NAME = "Leader Key Beta";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Beta;
+		};
 		427C18102BD311B500955B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -712,6 +765,7 @@
 			buildConfigurations = (
 				427C180A2BD311B500955B98 /* Debug */,
 				427C180B2BD311B500955B98 /* Release */,
+				A1B2C3D42C3D4E5F00112233 /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -721,6 +775,7 @@
 			buildConfigurations = (
 				427C180D2BD311B500955B98 /* Debug */,
 				427C180E2BD311B500955B98 /* Release */,
+				A1B2C3D52C3D4E5F00112233 /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
