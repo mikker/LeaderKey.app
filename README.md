@@ -43,9 +43,6 @@ uses the `Leader Key Beta.app` name, a distinct bundle identifier, independent
 preferences, and `~/Library/Application Support/Leader Key Beta` for its config.
 It does not use the release update feed.
 
-Push a `beta-v*` tag to publish an unsigned Beta zip as a GitHub prerelease.
-For example: `git tag beta-v1.17.4.0 && git push origin beta-v1.17.4.0`.
-
 ### Post-Install setup
 - Open the settings menu with the menu bar icon <img width="17" alt="Screenshot 2025-05-21 at 1 58 46 PM" src="https://github.com/user-attachments/assets/7ba2cd99-dbd1-4b23-a35b-c5579e797321" />
 - Choose your [`leader`](#what-do-i-set-as-my-leader-key) (`Shortcut` that will open the app) 
