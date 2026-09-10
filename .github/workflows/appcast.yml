@@ -10,6 +10,7 @@ on:
 
 jobs:
   call-workflow:
+    if: github.event_name != 'release' || !github.event.release.prerelease
     uses: mikker/appcast-workflow/.github/workflows/appcast.yml@main
     secrets: inherit
     permissions:
